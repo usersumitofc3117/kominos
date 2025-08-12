@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Pizza Orders</title>
+  <link th:href="@{/css/list.css}" rel="stylesheet"/>
+</head>
+<body>
+  <header class="table-header">
+    <h1>All Pizza Orders</h1>
+  </header>
+  <main>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Price</th></tr>
+        </thead>
+        <tbody>
+          <tr th:each="p : ${orders}" class="fade-in-row">
+            <td th:text="${p.id}"></td>
+            <td th:text="${p.name}"></td>
+            <td th:text="${p.price}"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="action-link">
+      <a th:href="@{/}">Order Another</a>
+    </div>
+  </main>
+</body>
+</html>

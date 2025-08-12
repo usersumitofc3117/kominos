@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Order Pizza</title>
+  <link th:href="@{/css/style.css}" rel="stylesheet"/>
+  <script th:src="@{/js/app.js}" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <h1>Order Pizza</h1>
+  </header>
+  <main>
+    <form th:action="@{/save}" th:object="${pizza}" method="post" onsubmit="return validateForm()" class="pizza-form">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" th:field="*{name}" placeholder="Your name"/>
+        <span class="error" id="error-name"></span>
+      </div>
+      <div class="form-group">
+        <label>Price</label>
+        <input type="number" th:field="*{price}" step="0.01" placeholder="0.00"/>
+        <span class="error" id="error-price"></span>
+      </div>
+      <button type="submit" class="btn">Order Now</button>
+    </form>
+  </main>
+  <footer>
+    <p>© 2025 Pizza Delight</p>
+  </footer>
+</body>
+</html>

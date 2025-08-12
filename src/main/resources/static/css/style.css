@@ -1,0 +1,83 @@
+/* Typography & Layout */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #fdfdfd;
+  color: #333;
+}
+
+.hero {
+  background: linear-gradient(135deg, #ff7f50, #ff4500);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+/* Form Styling */
+.pizza-form {
+  max-width: 400px;
+  margin: -60px auto 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.pizza-form input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+.pizza-form input:focus {
+  border-color: #ff7f50;
+  outline: none;
+}
+
+.error {
+  display: block;
+  margin-top: 6px;
+  color: #d9534f;
+  font-size: 0.9em;
+  visibility: hidden;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  background: #ff7f50;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1.1em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #ff6347;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #fafafa;
+  font-size: 0.9em;
+}
